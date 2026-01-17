@@ -1,65 +1,100 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Dropdown Menu Design - Easy Tutorials</title>
+    <meta charset="UTF-8">
+    <title>Foodie Place</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="menu-bar">
+
+    <h1>Foodie Place</h1>
+
+    <nav>
         <ul>
-            <li class="active"><a href="#"><i class="fa fa-house"></i>Home</a></li>
-
-            <li>
-                <a href="#"><i class="fa fa-user"></i>About Us</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="#">Mission</a></li>
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">Team</a></li>
-                    </ul>
-                </div>
-            </li>
-
-            <li>
-                <a href="#"><i class="fa fa-clone"></i>Services</a>
-                <div class="sub-menu-1">
-                    <ul>
-                        <li><a href="#">Web Designing</a></li>
-
-                        <li class="hover-me">
-                            <a href="#">Marketing</a><i class="fa fa-angle-right"></i>
-                            <div class="sub-menu-2">
-                                <ul>
-                                    <li><a href="#">SEO</a></li>
-                                    <li><a href="#">Social Media</a></li>
-                                    <li><a href="#">Email Marketing</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="hover-me">
-                            <a href="#">Mobile App</a><i class="fa fa-angle-right"></i>
-                            <div class="sub-menu-3">
-                                <ul>
-                                    <li><a href="#">Android App</a></li>
-                                    <li><a href="#">iOS App</a></li>
-                                    <li><a href="#">Ionic App</a></li>
-                                    <li><a href="#">Flutter App</a></li>
-                                    <li><a href="#">Unity App</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-            </li>
-
-            <li><a href="#"><i class="fa fa-users"></i>Clients</a></li>
-            <li><a href="#"><i class="fa fa-angellist"></i>Investers</a></li>
-            <li><a href="#"><i class="fa fa-inr"></i>Pricing</a></li>
-            <li><a href="#"><i class="fa fa-edit"></i>Training</a></li>
-            <li><a href="#"><i class="fa fa-phone"></i>Contact</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Near</a></li>
+            <li><a href="#">About</a></li>
         </ul>
+    </nav>
+
+    <section class="items">
+        <div class="item">
+            <img src="https://shorturl.at/K55oc" alt="Pizza Mushroom">
+            <h4>Pizza Mushroom</h4>
+            <p>Price: 3000 Ks</p>
+            <button onclick="orderItem('Pizza Mushroom', 3000)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://h7.cl/1mDHY" alt="Pizza Tomato">
+            <h4>Pizza Tomato</h4>
+            <p>Price: 2500 Ks</p>
+            <button onclick="orderItem('Pizza Tomato', 2500)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://h7.cl/1hGrs" alt="Pizza Cheese">
+            <h4>Pizza Cheese</h4>
+            <p>Price: 2800 Ks</p>
+            <button onclick="orderItem('Pizza Cheese', 2800)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://shorturl.at/2O9OF" alt="Pasta">
+            <h4>Pasta</h4>
+            <p>Price: 3500 Ks</p>
+            <button onclick="orderItem('Pasta', 3500)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://shorturl.at/YV8pX" alt="Spaghetti">
+            <h4>Spaghetti</h4>
+            <p>Price: 3200 Ks</p>
+            <button onclick="orderItem('Spaghetti', 3200)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://shorturl.at/CRn2d" alt="Pasta Flower">
+            <h4>Pasta Flower</h4>
+            <p>Price: 3000 Ks</p>
+            <button onclick="orderItem('Pasta Flower', 3000)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://h7.cl/1mDIY" alt="Coffee">
+            <h4>Coffee</h4>
+            <p>Price: 1500 Ks</p>
+            <button onclick="orderItem('Coffee', 1500)">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="https://h7.cl/1mDJA" alt="Orange Juice">
+            <h4>Orange Juice</h4>
+            <p>Price: 1800 Ks</p>
+            <button onclick="orderItem('Orange Juice', 1800)">Order</button>
+        </div>
+    </section>
+
+    <h2>Order List</h2>
+
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div class="total-box">
+        <h2>Total: <span id="totalAmount">0</span> Ks</h2>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
